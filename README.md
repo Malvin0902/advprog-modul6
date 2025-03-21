@@ -76,3 +76,10 @@ When the request method is GET, the path is /, and the HTTP version is 1.1, we r
 Refactoring is essential because it helps keep the code clean, well-structured, and easier to maintain and update. It reduces code duplication, improves test quality, and makes development more efficient in the long run. By refactoring, we ensure that the application can grow and evolve without becoming overly complex and difficult to maintain.
 
 ![alt text](image2.jpg)
+
+
+# Commit 4 Reflection notes
+
+## Why it works like that
+
+In a server running a **single-threaded model**, requests are processed **one at a time**. When the server starts processing a request like `/sleep`, any subsequent requests, such as `/`, will be **delayed** until the first request is fully processed.
