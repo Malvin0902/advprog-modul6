@@ -111,3 +111,7 @@ Each task is sent through a **channel**, and worker threads pick up tasks from t
 
 ## Conclusion  
 With multi-threading, our server becomes **faster, more efficient, and scalable!** 
+
+## Bonus  
+
+The `build` method is **more flexible** and provides better **error handling** using `Result`. This prevents unexpected panics when creating the thread pool.  
