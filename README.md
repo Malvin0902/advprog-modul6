@@ -61,4 +61,18 @@ Finally, the `handle_connection` method prints the contents of `http_request`.
 ## Web Browser Output
 When accessed via a web browser, this response will display the contents of `hello.html`.
 
-![alt text](image.png)!
+![alt text](image.png)
+
+# Commit 3 Reflection notes
+
+## how to split between response and why the refactoring is needed
+
+To separate one response from another, we can analyze the request method, path, and HTTP version in the HTTP headers.
+
+When the request method is GET, the path is /, and the HTTP version is 1.1, we return the response with hello.html. For other paths and methods, we send a "Not Found" response or 404.html.
+
+## Importance of Refactoring
+
+Refactoring is essential because it helps keep the code clean, well-structured, and easier to maintain and update. It reduces code duplication, improves test quality, and makes development more efficient in the long run. By refactoring, we ensure that the application can grow and evolve without becoming overly complex and difficult to maintain.
+
+![alt text](image2.jpg)
