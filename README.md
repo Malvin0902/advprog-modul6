@@ -32,21 +32,21 @@ Finally, the `handle_connection` method prints the contents of `http_request`.
 2. **Read the HTML File into a String**  
    Read the contents of `hello.html` into a string.
  
-       ```rust
+    ```rust
     let contents = fs::read_to_string("hello.html").unwrap();
     ``` 
 
 3. **Calculate the Content Length**  
    Determine the length of the HTML content.
 
-        ```rust
+    ```rust
     let length = contents.len();
     ``` 
 
 4. **Construct the Full HTTP Response**  
    Format the response with the status line, content length, and body.
 
-        ```rust
+    ```rust
     let response =
         format!("{status_line}\r\nContent-Length:{length}\r\n\r\n{contents}");
     ``` 
@@ -54,7 +54,7 @@ Finally, the `handle_connection` method prints the contents of `http_request`.
 5. **Send the Response to the Client**  
    Convert the response into bytes and send it through the stream.
 
-        ```rust
+    ```rust
     stream.write_all(response.as_bytes()).unwrap();
     ``` 
 
